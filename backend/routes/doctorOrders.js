@@ -81,7 +81,7 @@ router.post("/FHIR", (req, res, next) => {
   docOrder.save().then(createdDocOrder => {
     res.status(201).json({
       message: 'Doctor Order Added Successfully',
-      doctorOrderId: createdDocOrder._id
+      doctorOrder: createdDocOrder
     });
 
   });
@@ -121,7 +121,7 @@ router.post("", (req, res, next) => {
   docOrder.save().then(createdDocOrder => {
     res.status(201).json({
       message: 'Doctor Order Added Successfully',
-      doctorOrderId: createdDocOrder._id
+      doctorOrder: createdDocOrder
     });
 
   });
