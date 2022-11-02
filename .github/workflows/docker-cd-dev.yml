@@ -2,7 +2,7 @@ name: Docker Image CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
   workflow_dispatch:
 
 jobs:
@@ -25,11 +25,11 @@ jobs:
         context: .
         file: Dockerfile.base
         push: true
-        tags: codexrems/node14-pkg-config:REMSvCurrent
+        tags: codexrems/node14-pkg-config:REMSvExperimental
       
     - name: Build and push Server Docker image
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: codexrems/pharmacy-information-system:REMSvCurrent
+        tags: codexrems/pharmacy-information-system:REMSvExperimental
