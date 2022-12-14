@@ -2,7 +2,7 @@ name: Docker Base Image CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main, dev ]
   workflow_dispatch:
 
 
